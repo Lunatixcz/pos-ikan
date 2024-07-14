@@ -13,7 +13,7 @@
         <title>Metronic - the world's #1 selling Bootstrap Admin Theme Ecosystem for HTML, Vue, React, Angular &amp; Laravel by Keenthemes</title>
 		<meta charset="utf-8" />
 		<meta name="description" content="The most advanced Bootstrap Admin Theme on Themeforest trusted by 94,000 beginners and professionals. Multi-demo, Dark Mode, RTL support and complete React, Angular, Vue &amp; Laravel versions. Grab your copy now and get life-time updates for free." />
-		<meta name="keywords" content="Metronic, bootstrap, bootstrap 5, Angular, VueJs, React, Laravel, admin themes, web design, figma, web development, free templates, free admin themes, bootstrap theme, bootstrap template, bootstrap dashboard, bootstrap dak mode, bootstrap button, bootstrap datepicker, bootstrap timepicker, fullcalendar, datatables, flaticon" />
+		<meta name="keywords" content="Metronic, bootstrap, bootstrap 5, Angular, VueJs, React, Laravel, admin themes, web design, figma, web development, free /Templates, free admin themes, bootstrap theme, bootstrap /Template, bootstrap dashboard, bootstrap dak mode, bootstrap button, bootstrap datepicker, bootstrap timepicker, fullcalendar, datatables, flaticon" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta property="og:locale" content="en_US" />
 		<meta property="og:type" content="article" />
@@ -26,12 +26,12 @@
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
 		<!--end::Fonts-->
 		<!--begin::Page Vendor Stylesheets(used by this page)-->
-		<link href="Template/assets/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
-		<link href="Template/assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
-		<!--end::PagTemplate/e Vendor Stylesheets-->
-		<!--begin::GTemplate/lobal Stylesheets Bundle(used by all pages)-->
-		<link href="Template/assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
-		<link href="Template/assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+		<link href="/Template/assets/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
+		<link href="/Template/assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
+		<!--end::Pag/Template/e Vendor Stylesheets-->
+		<!--begin::G/Template/lobal Stylesheets Bundle(used by all pages)-->
+		<link href="/Template/assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+		<link href="/Template/assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
 
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 		<!--end::Global Stylesheets Bundle-->
@@ -41,7 +41,7 @@
             <div class="page d-flex flex-row  flex-column-fluid">
                 @include('layouts.navigation')
                 <div class="wrapper d-flex flex-column flex-row-fluid" id="kt_wrapper">
-                    {{-- @include('layouts.header') --}}
+                    @include('layouts.header')
                     <div class="content d-flex flex-column flex-column-fluid container-xxl" id="kt_content">
                         @yield('content')
                     </div>
@@ -49,20 +49,20 @@
             </div>
         </div>
 		<!--begin::Global Javascript Bundle(used by all pages)-->
-		<script src="Template/assets/plugins/global/plugins.bundle.js"></script>
-		<script src="Template/assets/js/scripts.bundle.js"></script>
-		<!--end::GlobTemplate/al Javascript Bundle-->
-		<!--begin::PaTemplate/ge Vendors Javascript(used by this page)-->
-		<script src="Template/assets/plugins/custom/fullcalendar/fullcalendar.bundle.js"></script>
-		<script src="Template/assets/plugins/custom/datatables/datatables.bundle.js"></script>
-		<!--end::PageTemplate/ Vendors Javascript-->
-		<!--begin::PaTemplate/ge Custom Javascript(used by this page)-->
-		<script src="Template/assets/js/widgets.bundle.js"></script>
-		<script src="Template/assets/js/custom/widgets.js"></script>
-		<script src="Template/assets/js/custom/apps/chat/chat.js"></script>
-		<script src="Template/assets/js/custom/utilities/modals/upgrade-plan.js"></script>
-		<script src="Template/assets/js/custom/utilities/modals/create-app.js"></script>
-		<script src="Template/assets/js/custom/utilities/modals/users-search.js"></script>
+		<script src="/Template/assets/plugins/global/plugins.bundle.js"></script>
+		<script src="/Template/assets/js/scripts.bundle.js"></script>
+		<!--end::Glob/Template/al Javascript Bundle-->
+		<!--begin::Pa/Template/ge Vendors Javascript(used by this page)-->
+		<script src="/Template/assets/plugins/custom/fullcalendar/fullcalendar.bundle.js"></script>
+		<script src="/Template/assets/plugins/custom/datatables/datatables.bundle.js"></script>
+		<!--end::Page/Template/ Vendors Javascript-->
+		<!--begin::Pa/Template/ge Custom Javascript(used by this page)-->
+		<script src="/Template/assets/js/widgets.bundle.js"></script>
+		<script src="/Template/assets/js/custom/widgets.js"></script>
+		<script src="/Template/assets/js/custom/apps/chat/chat.js"></script>
+		<script src="/Template/assets/js/custom/utilities/modals/upgrade-plan.js"></script>
+		<script src="/Template/assets/js/custom/utilities/modals/create-app.js"></script>
+		<script src="/Template/assets/js/custom/utilities/modals/users-search.js"></script>
         @stack('scripts')
     </body>
 

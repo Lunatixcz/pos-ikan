@@ -12,7 +12,8 @@ class SupplierController extends Controller
      */
     public function index()
     {
-        //
+        $suppliers = Supplier::get();
+        return view('admin.supplier.index', compact('suppliers'));
     }
 
     /**
@@ -20,7 +21,7 @@ class SupplierController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.supplier.create');
     }
 
     /**
@@ -28,7 +29,22 @@ class SupplierController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'nama_supplier' => 'required|string|max:255',
+            'jenis_kelamin' => 'required|string|max:255',
+            'alamat' => 'nullable|string',
+            'email' => 'required|email|',
+        ]);
+
+        $supplier = new Supplier();
+        $supplier->nama_supplier = $validatedData['nama_supplier'];
+        $supplier->jenis_kelamin = $validatedData['jenis_kelamin'];
+        $supplier->alamat = $validatedData['alamat'];
+        $supplier->email = $validatedData['email'];
+
+        $supplier->save();
+
+        return redirect()->route('supplier.index')->with('success', 'Supplier added successfully');
     }
 
     /**
@@ -36,7 +52,7 @@ class SupplierController extends Controller
      */
     public function show(Supplier $supplier)
     {
-        //
+        return view('admin.supplier.show', compact('supplier'));
     }
 
     /**
@@ -44,7 +60,7 @@ class SupplierController extends Controller
      */
     public function edit(Supplier $supplier)
     {
-        //
+        return view('admin.supplier.edit', compact('supplier'));
     }
 
     /**
@@ -52,7 +68,22 @@ class SupplierController extends Controller
      */
     public function update(Request $request, Supplier $supplier)
     {
-        //
+        $validatedData = $request->validate([
+            'nama_supplier' => 'required|string|max:255',
+            'jenis_kelamin' => 'required|string|max:255',
+            'alamat' => 'nullable|string',
+            'email' => 'required|email|',
+        ]);
+
+        $supplier->nama_supplier = $validatedData['nama_supplier'];
+        $supplier->jenis_kelamin = $validatedData['jenis_kelamin'];
+        $supplier->alamat = $validatedData['alamat'];
+        $supplier->email = $validatedData['email'];
+
+        $supplier->save();
+
+        // Redirect to the index or another relevant page with a success message
+        return redirect()->route('supplier.index')->with('success', 'Supplier updated successfully');
     }
 
     /**
@@ -60,6 +91,8 @@ class SupplierController extends Controller
      */
     public function destroy(Supplier $supplier)
     {
-        //
+        $supplier->delete();
+
+        return redirect()->route('supplier.index')->with('succcess', 'Supplier Deleted Successfully');
     }
 }

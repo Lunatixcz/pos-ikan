@@ -47,7 +47,8 @@
                     </a>
                 </div>
                 <div class="menu-item">
-                    <div class="menu-link" href="#">
+                    <a href="{{ route('supplier.index') }}">
+                    <div class="menu-link">
                         <span class="menu-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="1.6rem" height="1.6rem" viewBox="0 0 24 24">
                                 <circle cx="15" cy="6" r="3" fill="currentColor" opacity="0.4" />
@@ -60,6 +61,7 @@
                             Supplier
                         </span>
                     </div>
+                    </a>
                 </div>
                 <div class="menu-item">
                     <div class="menu-link" href="#">
