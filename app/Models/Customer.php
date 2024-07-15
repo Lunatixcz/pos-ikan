@@ -5,20 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Supplier extends Model
+class Customer extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'nama_supplier',
+        'nama_konsumen',
         'jenis_kelamin',
         'alamat',
         'email',
         'total_transaksi',
     ];
-
-    public function pembelian()
-    {
-        return $this->hasMany(Pembelian::class);
-    }
 }

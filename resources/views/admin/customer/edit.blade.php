@@ -2,25 +2,25 @@
 
 @section('content')
     <div class="flex justify-between items-center mb-4">
-        <h1 class="text-4xl">Edit Supplier <strong>{{ $supplier->nama_supplier }}</strong></h1>
+        <h1 class="text-4xl">Edit Customer <strong>{{ $customer->nama_konsumen }}</strong></h1>
     </div>
     <div class="card shadow-sm mt-4">
-        <form class="form" method="POST" action="{{ route('supplier.update', $supplier) }}">
+        <form class="form" method="POST" action="{{ route('customer.update', $customer) }}">
             @csrf
             @method('PUT')
             <div class="card-body">
                 <div class="form-group row">
-                    <label class="col-lg-3 col-form-label text-right">Nama Supplier</label>
+                    <label class="col-lg-3 col-form-label text-right">Nama Customer</label>
                     <div class="col-lg-6">
-                        <input type="text" name="nama_supplier" class="form-control form-control-solid" value="{{ $supplier->nama_supplier }}" required>
+                        <input type="text" name="nama_konsumen" class="form-control form-control-solid" value="{{ $customer->nama_konsumen }}" required>
                     </div>
                 </div>
                 <div class="form-group row mt-12">
                     <label class="col-lg-3 col-form-label text-right">Jenis Kelamin</label>
                     <div class="col-lg-6">
                         <select class="form-select form-select-solid" aria-label="Select example" name="jenis_kelamin" required>
-                            <option value="{{ $supplier->jenis_kelamin }}">
-                                @if ($supplier->jenis_kelamin == 1)
+                            <option value="{{ $customer->jenis_kelamin }}">
+                                @if ($customer->jenis_kelamin == 1)
                                 Laki-Laki
                                 @else
                                 Perempuan
@@ -34,13 +34,13 @@
                 <div class="form-group row mt-12">
                     <label class="col-lg-3 col-form-label text-right">Alamat</label>
                     <div class="col-lg-6">
-                        <textarea name="alamat" class="form-control form-control-solid" data-kt-autsize="true">{{ $supplier->alamat }}</textarea>
+                        <textarea name="alamat" class="form-control form-control-solid" data-kt-autsize="true">{{ $customer->alamat }}</textarea>
                     </div>
                 </div>
                 <div class="form-group row mt-8">
                     <label class="col-lg-3 col-form-label text-right">E-mail</label>
                     <div class="col-lg-6">
-                        <input type="email" name="email" class="form-control form-control-solid" value="{{ $supplier->email }}" required>
+                        <input type="email" name="email" class="form-control form-control-solid" value="{{ $customer->email }}" required>
                     </div>
                 </div>
             </div>
@@ -48,7 +48,7 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <button type="submit" class="btn btn-primary mr-2">Save</button>
-                        <a href="{{ route('supplier.index') }}" class="btn btn-secondary mr-2">cancel</a>
+                        <a href="{{ route('customer.index') }}" class="btn btn-secondary mr-2">cancel</a>
                     </div>
                     <div class="col-lg-6 text-lg-right">
                         <button type="reset" class="btn btn-danger">Delete</button>

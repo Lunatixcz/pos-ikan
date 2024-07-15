@@ -87,7 +87,6 @@ class IkanController extends Controller
     public function destroy(Ikan $ikan)
     {
         $ikan->delete();
-
         return redirect()->route('ikan.index')->with('success', 'Ikan berhasil dihapus!');
     }
 }

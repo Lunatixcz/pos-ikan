@@ -2,16 +2,16 @@
 
 @section('content')
     <div class="flex justify-between items-center mb-4">
-        <h1 class="text-4xl">Tambah Supplier</h1>s
+        <h1 class="text-4xl">Tambah Customer</h1>s
     </div>
     <div class="card shadow-sm mt-4">
-        <form class="form" method="POST" action="{{ route('supplier.store') }}">
+        <form class="form" method="POST" action="{{ route('customer.store') }}">
             @csrf
             <div class="card-body">
                 <div class="form-group row">
-                    <label class="col-lg-3 col-form-label text-right">Nama Supplier</label>
+                    <label class="col-lg-3 col-form-label text-right">Nama Customer</label>
                     <div class="col-lg-6">
-                        <input type="text" name="nama_supplier" class="form-control form-control-solid" placeholder="Masukkan nama supplier"/ required>
+                        <input type="text" name="nama_konsumen" class="form-control form-control-solid" placeholder="Masukkan nama konsumen..."/ required>
                     </div>
                 </div>
                 <div class="form-group row mt-12">
@@ -32,7 +32,7 @@
                 <div class="form-group row mt-8">
                     <label class="col-lg-3 col-form-label text-right">E-mail</label>
                     <div class="col-lg-6">
-                        <input type="email" name="email" class="form-control form-control-solid" placeholder="Masukkan stock sekarang"/ required>
+                        <input type="email" name="email" class="form-control form-control-solid" placeholder="Masukkan alamat e-mail..."/ required>
                     </div>
                 </div>
             </div>
@@ -40,7 +40,7 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <button type="submit" class="btn btn-primary mr-2">Save</button>
-                        <a href="{{ route('ikan.index') }}" class="btn btn-secondary mr-2">cancel</a>
+                        <a href="{{ route('customer.index') }}" class="btn btn-secondary mr-2">cancel</a>
                     </div>
                     <div class="col-lg-6 text-lg-right">
                         <button type="reset" class="btn btn-danger">Delete</button>

@@ -10,11 +10,11 @@
             <div class="p-4 text-3xl">
                 <div class="flex flex-col mb-8">
                     <label class="text-gray-700 text-lg">Nama:</label>
-                    <div class="text-black font-bold">{{ $supplier->nama_supplier }}</div>
+                    <div class="text-black font-medium">{{ $supplier->nama_supplier }}</div>
                 </div>
                 <div class="flex flex-col mb-8">
                     <label class="text-gray-700 text-lg">Jenis Kelamin:</label>
-                    <div class="text-black font-bold">
+                    <div class="text-black font-medium">
                         @if ($supplier->jenis_kelamin == 1)
                             Laki-Laki
                         @else
@@ -24,15 +24,15 @@
                 </div>
                 <div class="flex flex-col mb-8">
                     <label class="text-gray-700 text-lg">Alamat:</label>
-                    <div class="text-black font-bold">{{ $supplier->alamat }}</div>
+                    <div class="text-black font-medium">{{ $supplier->alamat }}</div>
                 </div>
                 <div class="flex flex-col mb-8">
                     <label class="text-gray-700 text-lg">E-mail:</label>
-                    <div class="text-black font-bold">{{ $supplier->email }}</div>
+                    <div class="text-black font-medium">{{ $supplier->email }}</div>
                 </div>
                 <div class="flex flex-col mb-8">
                     <label class="text-gray-700 text-lg">Total Transaksi: </label>
-                    <div class="text-black font-bold">Rp {{ number_format($supplier->total_transaksi, 0, ',', '.') }}</div>
+                    <div class="text-black font-medium">Rp {{ number_format($supplier->total_transaksi, 0, ',', '.') }}</div>
                 </div>
             </div>
         </div>

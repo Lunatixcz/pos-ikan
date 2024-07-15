@@ -1,9 +1,14 @@
 <?php
 
+use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\IkanController;
 use App\Http\Controllers\KonsumenController;
+use App\Http\Controllers\PembelianController;
+use App\Http\Controllers\PenjualanController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SupplierController;
+use App\Models\Customer;
+use App\Models\Pembelian;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -21,8 +26,10 @@ Route::middleware('auth')->group(function () {
 
     Route::resources([
         'ikan' => IkanController::class,
-        'customer' => KonsumenController::class,
+        'customer' => CustomerController::class,
         'supplier' => SupplierController::class,
+        'pembelian' => PembelianController::class,
+        'penjualan' => PenjualanController::class,
     ]);
 });
 

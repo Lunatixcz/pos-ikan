@@ -2,15 +2,15 @@
 
 @section('content')
     <div class="flex justify-between items-center mb-4">
-        <h1 class="text-4xl">Supplier</h1>
-        <a href="{{ route('supplier.create') }}" class="btn btn-light-primary">Tambah Supplier</a>
+        <h1 class="text-4xl">Customer</h1>
+        <a href="{{ route('customer.create') }}" class="btn btn-light-primary">Tambah Customer</a>
     </div>
     <div class="card shadow-sm mt-4">
         <div class="card-body">
             <table id="kt_datatable_dom_positioning" class="table table-striped table-row-bordered gy-5 gs-7 border rounded">
                 <thead>
                     <tr class="fw-bold fs-6 text-gray-800 px-7">
-                        <th>Nama Supplier</th>
+                        <th>Nama Customer</th>
                         <th>Jenis Kelamin</th>
                         <th>Alamat</th>
                         <th>Email</th>
@@ -19,23 +19,23 @@
                     </tr>
                 </thead>
                 <tbody>
-                @foreach ($suppliers as $supplier)
+                @foreach ($customers as $customer)
                     <tr>
-                        <td>{{ $supplier->nama_supplier }}</td>
+                        <td>{{ $customer->nama_konsumen }}</td>
                         <td>
-                            @if ($supplier->jenis_kelamin == 1)
+                            @if ($customer->jenis_kelamin == 1)
                                 Laki-Laki
                             @else
                                 Perempuan
                             @endif
                         </td>
-                        <td>{{ $supplier->alamat }}</td>
-                        <td>{{ $supplier->email}}</td>
-                        <td>{{ $supplier->created_at }}</td>
+                        <td>{{ $customer->alamat }}</td>
+                        <td>{{ $customer->email}}</td>
+                        <td>{{ $customer->created_at }}</td>
                         <td>
-                            <a href="{{ route('supplier.show', $supplier) }}" class="btn btn-light-primary">Detail</a>
-                            <a href="{{ route('supplier.edit', $supplier) }}" class="btn btn-light-warning">Edit</a>
-                            <button type="button" class="btn btn-light-danger" data-bs-toggle="modal" data-bs-target="#deleteModal" data-supplier-id="{{ $supplier->id }}" data-supplier-name="{{ $supplier->nama_supplier }}">
+                            <a href="{{ route('customer.show', $customer) }}" class="btn btn-light-primary">Detail</a>
+                            <a href="{{ route('customer.edit', $customer) }}" class="btn btn-light-warning">Edit</a>
+                            <button type="button" class="btn btn-light-danger" data-bs-toggle="modal" data-bs-target="#deleteModal" data-customer-id="{{ $customer->id }}" data-customer-name="{{ $customer->nama_konsumen }}">
                                 Delete
                             </button>
                         </td>
@@ -57,7 +57,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>Yakin ingin menghapus <strong id="supplierName"></strong>?</p>
+                    <p>Yakin ingin menghapus <strong id="customerName"></strong>?</p>
                 </div>
                 <div class="modal-footer">
                     <form id="deleteForm" method="POST" action="">
@@ -94,12 +94,12 @@
             // Handle delete button click
             $('#deleteModal').on('show.bs.modal', function (event) {
                 var button = $(event.relatedTarget); // Button that triggered the modal
-                var supplierId = button.data('supplier-id'); // Extract info from data-* attributes
-                var supplierName = button.data('supplier-name');
+                var customerId = button.data('customer-id'); // Extract info from data-* attributes
+                var customerName = button.data('customer-name');
 
                 var modal = $(this);
-                modal.find('#supplierName').text(supplierName); // Set the supplier name in the modal
-                var action = "{{ route('supplier.destroy', ':id') }}".replace(':id', supplierId); // Set the form action
+                modal.find('#customerName').text(customerName); // Set the customer name in the modal
+                var action = "{{ route('customer.destroy', ':id') }}".replace(':id', customerId); // Set the form action
                 modal.find('#deleteForm').attr('action', action);
             });
         });

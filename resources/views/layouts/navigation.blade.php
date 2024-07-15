@@ -64,19 +64,21 @@
                     </a>
                 </div>
                 <div class="menu-item">
-                    <div class="menu-link" href="#">
-                        <span class="menu-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="1.6rem" height="1.6rem" viewBox="0 0 24 24">
-                                <circle cx="15" cy="6" r="3" fill="currentColor" opacity="0.4" />
-                                <ellipse cx="16" cy="17" fill="currentColor" opacity="0.4" rx="5" ry="3" />
-                                <circle cx="9.001" cy="6" r="4" fill="currentColor" />
-                                <ellipse cx="9.001" cy="17.001" fill="currentColor" rx="7" ry="4" />
-                            </svg>
-                        </span>
-                        <span class="menu-title">
-                            Customer
-                        </span>
-                    </div>
+                    <a href="{{ route('customer.index') }}">
+                        <div class="menu-link">
+                            <span class="menu-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.6rem" height="1.6rem" viewBox="0 0 24 24">
+                                    <circle cx="15" cy="6" r="3" fill="currentColor" opacity="0.4" />
+                                    <ellipse cx="16" cy="17" fill="currentColor" opacity="0.4" rx="5" ry="3" />
+                                    <circle cx="9.001" cy="6" r="4" fill="currentColor" />
+                                    <ellipse cx="9.001" cy="17.001" fill="currentColor" rx="7" ry="4" />
+                                </svg>
+                            </span>
+                            <span class="menu-title">
+                                Customer
+                            </span>
+                        </div>
+                    </a>
                 </div>
                 <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                     <span class="menu-link">
@@ -91,7 +93,7 @@
                     </span>
                     <div class="menu-sub menu-sub-accordion menu-active-bg" kt-hidden-height="312" style="display: none; overflow: hidden;">
                         <div class="menu-item">
-                            <a class="menu-link" href="../../demo1/dist/account/overview.html">
+                            <a class="menu-link" href="{{ route('pembelian.index') }}">
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
@@ -99,7 +101,7 @@
                             </a>
                         </div>
                         <div class="menu-item">
-                            <a class="menu-link" href="../../demo1/dist/account/overview.html">
+                            <a class="menu-link" href="{{ route('penjualan.index') }}">
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>

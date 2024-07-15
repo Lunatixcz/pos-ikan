@@ -40,7 +40,7 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <button type="submit" class="btn btn-primary mr-2">Save</button>
-                        <a href="{{ route('ikan.index') }}" class="btn btn-secondary mr-2">cancel</a>
+                        <a href="{{ route('customer.index') }}" class="btn btn-secondary mr-2">cancel</a>
                     </div>
                     <div class="col-lg-6 text-lg-right">
                         <button type="reset" class="btn btn-danger">Delete</button>
