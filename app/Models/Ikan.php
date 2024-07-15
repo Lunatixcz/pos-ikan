@@ -15,4 +15,9 @@ class Ikan extends Model
         'jumlah_ikan',
         'category',
     ];
+
+    public function detail_pembelian()
+    {
+        return $this->hasMany(DetailPembelian::class);
+    }
 }
