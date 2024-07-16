@@ -16,4 +16,9 @@ class Customer extends Model
         'email',
         'total_transaksi',
     ];
+
+    public function pembelian()
+    {
+        return $this->hasMany(Pembelian::class);
+    }
 }

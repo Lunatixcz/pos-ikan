@@ -105,6 +105,11 @@ return [
         ),
     ],
 
+    'aliases' => [
+        // Other aliases...
+        'Pdf' => Barryvdh\DomPDF\Facade\Pdf::class,
+    ],
+
     /*
     |--------------------------------------------------------------------------
     | Maintenance Mode Driver
