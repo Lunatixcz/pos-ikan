@@ -69,6 +69,9 @@ class PembelianController extends Controller
         // Update total_transaksi in Pembelian record
         $pembelian->update(['total_transaksi' => $totalTransaksi]);
 
+        $supplier = Supplier::findOrFail($request->input('id_supplier'));
+        $supplier->increment('total_transaksi', $totalTransaksi);
+
         return redirect()->route('pembelian.index')->with('success', 'Pembelian created successfully.');
     }
 

@@ -67,6 +67,9 @@ class PenjualanController extends Controller
         // Update total_transaksi in Pembelian record
         $penjualan->update(['total_penjualan' => $totalPenjualan]);
 
+        $customers = Customer::findOrFail($request->input('id_supplier'));
+        $customers->increment('total_transaksi', $totalPrice);
+
         return redirect()->route('penjualan.index')->with('success', 'Penjualan created successfully.');
     }
 

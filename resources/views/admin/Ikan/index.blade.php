@@ -22,7 +22,7 @@
                     <tr>
                         <td>{{ $ikan->nama }}</td>
                         <td>{{ $ikan->jumlah_ikan }}</td>
-                        <td>{{ $ikan->harga_ikan }}</td>
+                        <td>Rp {{ number_format(($ikan->harga_ikan), 0, ',', '.') }}</td>
                         <td>{{ \App\Enums\CategoryType::from($ikan->category)->name }}</td>
                         <td>
                             <a href="{{ route('ikan.edit', $ikan) }}" class="btn btn-light-warning">Edit</a>

@@ -32,9 +32,6 @@
                         <div class="flex">
                             <!-- Logo -->
                             <div class="shrink-0 flex items-center">
-                                <a href="{{ route('dashboard') }}">
-                                    <x-application-logo class="block h-9 w-auto fill-current text-gray-800" />
-                                </a>
                             </div>
                         </div>
                     </div>
@@ -43,21 +40,13 @@
                 <!-- Responsive Navigation Menu -->
                 <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
                     <div class="pt-2 pb-3 space-y-1">
-                        <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                            {{ __('Dashboard') }}
-                        </x-responsive-nav-link>
                     </div>
 
                     <!-- Responsive Settings Options -->
                     <div class="pt-4 pb-1 border-t border-gray-200">
-                        <div class="px-4">
-                            <div class="font-medium text-base text-gray-800">name</div>
-                            <div class="font-medium text-sm text-gray-500">email</div>
-                        </div>
-
                         <div class="mt-3 space-y-1">
                             <x-responsive-nav-link :href="route('profile.edit')">
-                                {{ __('Profile') }}
+                                {{ __('Edit Profile') }}
                             </x-responsive-nav-link>
 
                             <!-- Authentication -->
@@ -81,42 +70,17 @@
                 <div class="d-flex align-items-center ms-1 ms-lg-3" id="kt_header_user_menu_toggle">
                     <!--begin::Menu wrapper-->
                     <div class="cursor-pointer symbol symbol-30px symbol-md-40px" data-kt-menu-trigger="click" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end">
-                        <img src="assets/media/avatars/300-1.jpg" alt="user">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1.6rem" height="1.6rem" viewBox="0 0 24 24">
+                            <circle cx="12" cy="6" r="4" fill="currentColor" />
+                            <path fill="currentColor" d="M20 17.5c0 2.485 0 4.5-8 4.5s-8-2.015-8-4.5S7.582 13 12 13s8 2.015 8 4.5" opacity="0.5" />
+                        </svg>  
                     </div>
                     <!--begin::User account menu-->
                     <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg menu-state-primary fw-bold py-4 fs-6 w-275px" data-kt-menu="true">
                         <!--begin::Menu item-->
-                        <div class="menu-item px-3">
-                            <div class="menu-content d-flex align-items-center px-3">
-                                <!--begin::Avatar-->
-                                <div class="symbol symbol-50px me-5">
-                                    <img alt="Logo" src="assets/media/avatars/300-1.jpg">
-                                </div>
-                                <!--end::Avatar-->
-                                <!--begin::Username-->
-                                <div class="d-flex flex-column">
-                                    <div class="fw-bolder d-flex align-items-center fs-5">Max Smith
-                                    <span class="badge badge-light-success fw-bolder fs-8 px-2 py-1 ms-2">Pro</span></div>
-                                    <a href="#" class="fw-bold text-muted text-hover-primary fs-7">max@kt.com</a>
-                                </div>
-                                <!--end::Username-->
-                            </div>
-                        </div>
-                        <!--end::Menu item-->
-                        <!--begin::Menu separator-->
-                        <div class="separator my-2"></div>
-                        <div class="mt-3 space-y-1">
-                            <!-- Authentication -->
-                        </div>
-                        <!--end::Menu separator-->
-                        <!--begin::Menu item-->
-                        <!--end::Menu item-->
-                        <!--begin::Menu item-->
-                        <!--end::Menu item-->
-                        <!--begin::Menu item-->
                         <div class="menu-item px-5">
                             <x-responsive-nav-link :href="route('profile.edit')">
-                                {{ __('Profile') }}
+                                {{ __('Edit Profile') }}
                             </x-responsive-nav-link>
                         </div>
                         <div class="menu-item px-5">
